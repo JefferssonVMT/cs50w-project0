@@ -20,5 +20,3 @@ Ok, es momento de que crees tu propio sitio web. Diseña una página sobre ti mi
 -   Tu sitio debe contener al menos una lista (ordenada o desordenada), al menos una tabla y al menos una imagen.
 
 -   Tus hojas de estilo deben contener al menos una variable SCSS, al menos un ejemplo de anidamiento SCSS y al menos un uso de herencia SCSS.
-
--   En README.md, incluye una breve descripción de tu proyecto, opcionalmente, que contiene cada archivo, y cualquier otra información adicional para el staff.
