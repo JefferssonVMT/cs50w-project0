@@ -1,0 +1,321 @@
+/* Variables SCSS */
+
+$titulos : #d55234;
+$parrafos : #1a535c;
+$marco_foto: #723d46;
+
+/*------------------------*/
+
+
+/*Selector por id*/
+#toogler
+{
+    background-color: darkslategray;
+}
+
+/*Selector todos los erlementos por etiqueta*/
+body{ 
+    background: 
+      linear-gradient(180deg, rgba(248, 184, 139,0) 20%, rgba(248, 184, 139,.1) 20%, rgba(248, 184, 139,.1) 40%, rgba(248, 184, 139,.2) 40%, rgba(248, 184, 139,.2) 60%, rgba(248, 184, 139,.4) 60%, rgba(248, 184, 139,.4) 80%, rgba(248, 184, 139,.5) 80%),
+      linear-gradient(45deg, rgba(250, 248, 132,.3) 20%, rgba(250, 248, 132,.4) 20%, rgba(250, 248, 132,.4) 40%, rgba(250, 248, 132,.5) 40%, rgba(250, 248, 132,.5) 60%, rgba(250, 248, 132,.6) 60%, rgba(250, 248, 132,.6) 80%, rgba(250, 248, 132,.7) 80%),
+      linear-gradient(-45deg, rgba(186, 237, 145,0) 20%, rgba(186, 237, 145,.1) 20%, rgba(186, 237, 145,.1) 40%, rgba(186, 237, 145,.2) 40%, rgba(186, 237, 145,.2) 60%, rgba(186, 237, 145,.4) 60%, rgba(186, 237, 145,.4) 80%, rgba(186, 237, 145,.6) 80%),
+      linear-gradient(90deg, rgba(178, 206, 254,0) 20%, rgba(178, 206, 254,.3) 20%, rgba(178, 206, 254,.3) 40%, rgba(178, 206, 254,.5) 40%, rgba(178, 206, 254,.5) 60%, rgba(178, 206, 254,.7) 60%, rgba(178, 206, 254,.7) 80%, rgba(178, 206, 254,.8) 80%),
+      linear-gradient(-90deg, rgba(242, 162, 232,0) 20%, rgba(242, 162, 232,.4) 20%, rgba(242, 162, 232,.4) 40%, rgba(242, 162, 232,.5) 40%, rgba(242, 162, 232,.5) 60%, rgba(242, 162, 232,.6) 60%, rgba(242, 162, 232,.6) 80%, rgba(242, 162, 232,.8) 80%),
+      linear-gradient(180deg, rgba(254, 163, 170,0) 20%, rgba(254, 163, 170,.4) 20%, rgba(254, 163, 170,.4) 40%, rgba(254, 163, 170,.6) 40%, rgba(254, 163, 170,.6) 60%, rgba(254, 163, 170,.8) 60%, rgba(254, 163, 170,.8) 80%, rgba(254, 163, 170,.9) 80%)
+  ;
+    /* Gradiente tomado de https://freebiesupply.com/blog/css-background-patterns/ */
+    /* Honestidad ante todo ;D */
+
+    background-color: rgb(254, 163, 170);
+    background-size: 100% 100%;
+    min-height: 100vh;
+  }
+  
+
+/* Selector de clases */
+.container
+{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*Selector de hijo*/
+div > h3 , .col-xs > h2
+{
+    color:$titulos;
+    text-align: center;
+}
+
+/*Selector de pseudo elemento*/
+#nombre::before
+{
+    content: "God ";
+    font-weight: bold;
+}
+
+/* Selecciona todos los elementos p dentro de un container */
+.container p , .col-xs p
+{
+    color : rgb(74, 9, 128);
+    font-weight: bolder;
+}
+
+/* YA CUMPLI CON LOS 5 DE SELECTORES, AHORA SOY LIBRE :) */
+
+
+%marco_foto
+{
+    border-radius : 150%;
+    object-fit: cover;
+    border-style: double;
+    border-color: $marco_foto;
+    border-width: thick;
+}
+/* Herencia */
+%titulos
+{
+    color : $titulos;
+    text-align: center;
+}
+
+.foto
+{
+    /* Herencia */
+    @extend %marco_foto;
+    margin : 20px;
+    width : 18vw;
+    height : 18vw;
+}
+
+p::selection
+{
+    color: red;
+    background-color: yellow;
+}
+
+.datos
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Anidamiento */
+table 
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 3%;
+
+    th
+    {
+        font-size: 98%;
+        background: #a3b3c273;
+    }
+
+    td, th
+    {
+        border-style: double;
+    }
+}
+
+.langp
+{
+    font-size: 400%;
+}
+
+.lang .fa, .langs .fas 
+{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: xx-large;
+    color: green;
+}
+
+h1
+{
+    /* Herencia */
+    @extend %titulos;
+    font-weight: bold;
+}
+
+h3
+{
+    /* Herencia */
+    @extend %titulos;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+h2
+{
+    /* Herencia */
+    @extend %titulos;
+    text-align: center;
+}
+
+.otros
+{
+    /* Anidamiento */
+    display: inline-flex;
+    margin-top: 3%;
+
+    .aptitudes_otros
+    {
+        font-size: x-large;
+        color : $parrafos;
+    }
+}
+
+.hobbie_box
+{
+    align-content: center;
+    justify-content: center;
+    background: #a0a8a05e;
+    padding: 40px;
+    margin-left: 0;
+    display: flex;
+}
+
+.hobbie_box_sf
+{
+    align-content: center;
+    justify-content: center;
+    background: unset;
+    padding: 40px;
+    margin-left: 0;
+    display: flex;
+}
+
+#hobbies_intro
+{
+    padding-left: 10%;
+    padding-right: 10%;
+    color : $parrafos;
+}
+
+.hobbie_info
+{
+    max-width: 40%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(111, 104, 104, 0.5);
+    border-radius: 20px;
+    margin-right: 5%;
+    padding: 40px;
+}
+
+.hobbie_img
+{
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 40vw;
+    height: 30vw;
+}
+
+@media only screen and (max-width: 600px)
+{
+    body 
+    {
+        margin-bottom: 2%;
+    }
+
+    .foto
+    {
+        @extend %marco_foto;
+        margin: 20px;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .info
+    {    
+        flex-wrap: wrap;
+    }
+
+    .navbar-collapse 
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hobbie_box
+    {
+        background: #a0a8a05e;
+        display: block;
+        padding-top: 1rem;
+    }
+
+    .hobbie_box_sf
+    {
+        background: unset;
+        display: block;
+        padding-top: 1rem;
+    }
+
+    .hobbie_info
+    {
+        max-width: 0;
+        align-content:unset;
+        justify-content: unset;
+        display: unset;
+        flex-wrap: unset;
+        background: unset;
+        border-radius: unset;
+        margin-right: unset;
+        padding: 0;
+    }
+
+    .hobbie_img
+    {
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: unset;
+        width: unset;
+        height: unset;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1130px)
+{
+    .hobbie_box
+    {
+        background: #a0a8a05e;
+        display: block;
+        padding-top: 1rem;
+    }
+
+    .hobbie_box_sf
+    {
+        background: unset;
+        display: block;
+        padding-top: 1rem;
+    }
+
+    .hobbie_info
+    {
+        max-width: 0;
+        align-content:unset;
+        justify-content: unset;
+        display: unset;
+        flex-wrap: unset;
+        background: unset;
+        border-radius: unset;
+        margin-right: unset;
+        padding: 0;
+    }
+
+    .hobbie_img
+    {
+        object-fit: cover;
+        overflow: hidden;
+
+        border-radius: 20px;
+        width: 50vw;
+        height: 40vw;
+    }
+}

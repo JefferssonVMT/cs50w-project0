@@ -1,149 +1,258 @@
-
+/* Variables SCSS */
+/*------------------------*/
 /*Selector por id*/
-#toogler
-{
-    background-color: darkslategray;
+#toogler {
+  background-color: darkslategray;
 }
 
 /*Selector todos los erlementos por etiqueta*/
-body
-{
-    background-color : rgb(220, 247, 244);
+body {
+  background: linear-gradient(180deg, rgba(248, 184, 139, 0) 20%, rgba(248, 184, 139, 0.1) 20%, rgba(248, 184, 139, 0.1) 40%, rgba(248, 184, 139, 0.2) 40%, rgba(248, 184, 139, 0.2) 60%, rgba(248, 184, 139, 0.4) 60%, rgba(248, 184, 139, 0.4) 80%, rgba(248, 184, 139, 0.5) 80%), linear-gradient(45deg, rgba(250, 248, 132, 0.3) 20%, rgba(250, 248, 132, 0.4) 20%, rgba(250, 248, 132, 0.4) 40%, rgba(250, 248, 132, 0.5) 40%, rgba(250, 248, 132, 0.5) 60%, rgba(250, 248, 132, 0.6) 60%, rgba(250, 248, 132, 0.6) 80%, rgba(250, 248, 132, 0.7) 80%), linear-gradient(-45deg, rgba(186, 237, 145, 0) 20%, rgba(186, 237, 145, 0.1) 20%, rgba(186, 237, 145, 0.1) 40%, rgba(186, 237, 145, 0.2) 40%, rgba(186, 237, 145, 0.2) 60%, rgba(186, 237, 145, 0.4) 60%, rgba(186, 237, 145, 0.4) 80%, rgba(186, 237, 145, 0.6) 80%), linear-gradient(90deg, rgba(178, 206, 254, 0) 20%, rgba(178, 206, 254, 0.3) 20%, rgba(178, 206, 254, 0.3) 40%, rgba(178, 206, 254, 0.5) 40%, rgba(178, 206, 254, 0.5) 60%, rgba(178, 206, 254, 0.7) 60%, rgba(178, 206, 254, 0.7) 80%, rgba(178, 206, 254, 0.8) 80%), linear-gradient(-90deg, rgba(242, 162, 232, 0) 20%, rgba(242, 162, 232, 0.4) 20%, rgba(242, 162, 232, 0.4) 40%, rgba(242, 162, 232, 0.5) 40%, rgba(242, 162, 232, 0.5) 60%, rgba(242, 162, 232, 0.6) 60%, rgba(242, 162, 232, 0.6) 80%, rgba(242, 162, 232, 0.8) 80%), linear-gradient(180deg, rgba(254, 163, 170, 0) 20%, rgba(254, 163, 170, 0.4) 20%, rgba(254, 163, 170, 0.4) 40%, rgba(254, 163, 170, 0.6) 40%, rgba(254, 163, 170, 0.6) 60%, rgba(254, 163, 170, 0.8) 60%, rgba(254, 163, 170, 0.8) 80%, rgba(254, 163, 170, 0.9) 80%);
+  /* Gradiente tomado de https://freebiesupply.com/blog/css-background-patterns/ */
+  /* Honestidad ante todo ;D */
+  background-color: #fea3aa;
+  background-size: 100% 100%;
+  min-height: 100vh;
 }
 
 /* Selector de clases */
-.container
-{
-    padding-right: 15px;
-    padding-left: 15px;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /*Selector de hijo*/
-div > h3
-{
-    color:red;
-    font-size: 1.2rem;
-    text-align: center;
+div > h3, .col-xs > h2 {
+  color: #d55234;
+  text-align: center;
 }
 
 /*Selector de pseudo elemento*/
-#nombre::before
-{
-    content: "God ";
-    font-weight: bold;
+#nombre::before {
+  content: "God ";
+  font-weight: bold;
 }
 
 /* Selecciona todos los elementos p dentro de un container */
-.container p
-{
-    color : rgb(74, 9, 128);
+.container p, .col-xs p {
+  color: #4a0980;
+  font-weight: bolder;
 }
 
 /* YA CUMPLI CON LOS 5 DE SELECTORES, AHORA SOY LIBRE :) */
 
-
-
-
-.foto
-{
-    margin : 20px;
-    width : 18vw;
-    height : 18vw;
-    border-radius : 150%;
-    object-fit: cover;
-    border-style: double;
-    border-color: #D4AF37;
-    border-width: thick;
+.foto {
+  border-radius: 150%;
+  object-fit: cover;
+  border-style: double;
+  border-color: #723d46;
+  border-width: thick;
 }
 
-p::selection
-{
-    color: red;
-    background-color: yellow;
+/* Herencia */
+h2, h3, h1 {
+  color: #d55234;
+  text-align: center;
 }
 
-.datos
-{
-    margin-left: 2%;
-    margin-right: 2%;
+.foto {
+  /* Herencia */
+  margin: 20px;
+  width: 18vw;
+  height: 18vw;
 }
 
-td, th
-{
-    border-style: double;
+p::selection {
+  color: red;
+  background-color: yellow;
 }
 
-table 
-{
-    border-collapse: collapse;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 3%;
+.datos {
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-th
-{
-    font-size: 98%;
+/* Anidamiento */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 3%;
+}
+table th {
+  font-size: 98%;
+  background: #a3b3c273;
+}
+table td, table th {
+  border-style: double;
 }
 
-.langp
-{
-    font-size: 400%;
+.langp {
+  font-size: 400%;
 }
 
 .lang .fa, .langs .fas {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: xx-large;
-    color: green;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: xx-large;
+  color: green;
 }
 
-h1
-{
-    color: red;
+h1 {
+  /* Herencia */
+  font-weight: bold;
 }
 
-h2
-{
-    color: red;
-    text-align: center;
+h3 {
+  /* Herencia */
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
-.aptitudes_otros
-{
-    
-    font-size: x-large;
-    color : rgb(74, 9, 128);
+h2 {
+  /* Herencia */
+  text-align: center;
 }
 
-.otros
-{
-    display: inline-flex;
-    margin-top: 3%;
+.otros {
+  /* Anidamiento */
+  display: inline-flex;
+  margin-top: 3%;
+}
+.otros .aptitudes_otros {
+  font-size: x-large;
+  color: #1a535c;
 }
 
-@media only screen and (max-width: 600px)
-{
-    .foto
-    {
-        margin: 20px;
-        width: 50vw;
-        height: 50vw;
-        border-radius: 150%;
-        object-fit: cover;
-        border-style: double;
-        border-color: #D4AF37;
-        border-width: thick;
-    }
-
-    .info
-    {    
-        flex-wrap: wrap;
-    }
-
-    .navbar-collapse 
-    {
-        display: flex;
-        justify-content: center;
-    }
+.hobbie_box {
+  align-content: center;
+  justify-content: center;
+  background: #a0a8a05e;
+  padding: 40px;
+  margin-left: 0;
+  display: flex;
 }
+
+.hobbie_box_sf {
+  align-content: center;
+  justify-content: center;
+  background: unset;
+  padding: 40px;
+  margin-left: 0;
+  display: flex;
+}
+
+#hobbies_intro {
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #1a535c;
+}
+
+.hobbie_info {
+  max-width: 40%;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(111, 104, 104, 0.5);
+  border-radius: 20px;
+  margin-right: 5%;
+  padding: 40px;
+}
+
+.hobbie_img {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 40vw;
+  height: 30vw;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-bottom: 2%;
+  }
+
+  .foto {
+    margin: 20px;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hobbie_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .hobbie_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .hobbie_info {
+    max-width: 0;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .hobbie_img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: unset;
+    width: unset;
+    height: unset;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1130px) {
+  .hobbie_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .hobbie_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .hobbie_info {
+    max-width: 0;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .hobbie_img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 50vw;
+    height: 40vw;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
