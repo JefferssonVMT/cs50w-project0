@@ -35,12 +35,11 @@ div > h3, .col-xs > h2 {
 
 /* Selecciona todos los elementos p dentro de un container */
 .container p, .col-xs p {
-  color: #4a0980;
+  color: #1a535c;
   font-weight: bolder;
 }
 
 /* YA CUMPLI CON LOS 5 DE SELECTORES, AHORA SOY LIBRE :) */
-
 .foto {
   border-radius: 150%;
   object-fit: cover;
@@ -166,6 +165,30 @@ h2 {
   border-radius: 20px;
   width: 40vw;
   height: 30vw;
+}
+
+.contact {
+  position: fixed;
+  object-position: 50% 50% !important;
+  right: -1px !important;
+  top: 50% !important;
+  font-size: xxx-large;
+  display: grid;
+}
+
+.contact_link {
+  height: 43px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+}
+
+#tinder {
+  width: 43px;
+  height: 42px;
+  background-color: white;
+  object-fit: cover;
+  border-radius: 12%;
 }
 
 @media only screen and (max-width: 600px) {
